@@ -1,6 +1,10 @@
-import {
-  randomNumber, greeting, getAnswer, checkAnswer,
-} from './index.js';
+import getRandomNumber from '../utils/generateRandomNumber.js';
+import runGame from '../index.js';
+
+const minNum = 1;
+const maxNum = 15;
+
+const description = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (m, n) => {
   if (!n) {
@@ -9,24 +13,16 @@ const gcd = (m, n) => {
   return gcd(n, m % n);
 };
 
-const gameRun = () => {
-  const userName = greeting();
-  console.log('Find the greatest common divisor of given numbers.');
-  const countRounds = 3;
-  const minNum = 1;
-  const maxNum = 15;
-  for (let i = countRounds; i > 0; i -= 1) {
-    const num1 = randomNumber(minNum, maxNum);
-    const num2 = randomNumber(minNum, maxNum);
-    const expression = `${num1} ${num2}`;
-    const answer = Number(getAnswer(expression));
-    const trueAnswer = gcd(num1, num2);
-    const check = checkAnswer(trueAnswer, answer, userName);
-    if (!check) {
-      return;
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
+const getDataGame = () => {
+  const num1 = getRandomNumber(minNum, maxNum);
+  const num2 = getRandomNumber(minNum, maxNum);
+  const question = `${num1} ${num2}`;
+  const correctAnswer = String(gcd(num1, num2));
+  return [question, correctAnswer];
 };
 
-export default gameRun;
+const startGameGcd = () => {
+  runGame(description, getDataGame);
+};
+
+export default startGameGcd;
