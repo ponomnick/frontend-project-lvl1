@@ -3,12 +3,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/dffe4c6d8d29328625a8/maintainability)](https://codeclimate.com/github/ponomnick/frontend-project-lvl1/maintainability)
 [![Linter Status](https://github.com/ponomnick/frontend-project-lvl1/workflows/Linter/badge.svg)](https://github.com/ponomnick/frontend-project-lvl1/actions)
 
-### Video
-
-<a href="https://asciinema.org/a/487225">Video Brain-calc</a>
-<a href="https://asciinema.org/a/488176">Video Brain-gcd</a>
-<a href="https://asciinema.org/a/488198">Video Brain-progression</a>
-<a href="https://asciinema.org/a/488204">Video Brain-prime</a>
 
 <a href="https://github.com/Zelurkcin" rel="nofollow">
     <img src="img/logo.png" alt="nZp logo" title="nZp" style="max-width:100%;" height="50" align="right">
@@ -97,13 +91,12 @@ Congratulations, Sam!
 
 Любой некорректный ввод считается ошибкой (например, n) и равносилен неправильному ответу.
 
+
+
+```
 [Demo brain-even](https://asciinema.org/a/486845)
 
 <a href="https://asciinema.org/a/486845?autoplay=1"><img src="https://asciinema.org/a/486845.png" width="auto"/></a>
-
-<a href="https://asciinema.org/a/486845">Video Brain-even</a>
-
-```
 
 #### <h4 id="game-calc" align = "center">**Игра: Калькулятор**</h4>
  
@@ -140,9 +133,10 @@ Let's try again, Sam!
 
 и завершить игру.
 ```
-[Demo brain-calc](https://asciinema.org/a/431593)
+[Demo brain-calc](https://asciinema.org/a/487225)
 
-<a href="https://asciinema.org/a/431593?autoplay=1"><img src="https://asciinema.org/a/431593.png" width="auto"/></a>
+<a href="https://asciinema.org/a/487225?autoplay=1"><img src="https://asciinema.org/a/487225.png" width="auto"/></a>
+
 
 #### <h4 id="game-gcd" align = "center">**Игра: Определение наибольшего общего делителя**</h4>
 
@@ -176,9 +170,9 @@ Your answer: 1
 '1' is wrong answer ;(. Correct answer was '25'.
 Let's try again, Sam!
 ```
-[Demo brain-gcd](https://asciinema.org/a/431592)
+[Demo brain-gcd](https://asciinema.org/a/488176)
 
-<a href="https://asciinema.org/a/431592?autoplay=1"><img src="https://asciinema.org/a/431592.png" width="auto"/></a>
+<a href="https://asciinema.org/a/488176?autoplay=1"><img src="https://asciinema.org/a/488176.png" width="auto"/></a>
 
 
 #### <h4 id="game-progression" align = "center">**Игра: Прогрессия**</h4>
@@ -216,9 +210,9 @@ Your answer: 1
 '1' is wrong answer ;(. Correct answer was '15'.
 Let's try again, Sam!
 ```
-[Demo brain-progression](https://asciinema.org/a/431594)
+[Demo brain-progression](https://asciinema.org/a/488198)
 
-<a href="https://asciinema.org/a/431594?autoplay=1"><img src="https://asciinema.org/a/431594.png" width="auto"/></a>
+<a href="https://asciinema.org/a/488198?autoplay=1"><img src="https://asciinema.org/a/488198.png" width="auto"/></a>
 
 #### <h4 id="game-prime" align = "center">**Игра: Определение простого числа**</h4>
 
@@ -238,6 +232,6 @@ Correct!
 
 Весь вывод и логика в случае правильного и неправильного ответа повторяют предыдущие шаги.
 ```
-[Demo brain-prime](https://asciinema.org/a/431595)  
+[Demo brain-prime](https://asciinema.org/a/488204)  
 
-<a href="https://asciinema.org/a/431595?autoplay=1"><img src="https://asciinema.org/a/431595.png" width="auto"/></a>
+<a href="https://asciinema.org/a/488204?autoplay=1"><img src="https://asciinema.org/a/488204.png" width="auto"/></a>
