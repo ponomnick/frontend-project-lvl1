@@ -1,13 +1,14 @@
-import {
-  randomNumber, greeting, getAnswer, checkAnswer,
-} from './index.js';
+import getRandomNumber from '../utils/generateRandomNumber.js';
+import runGame from '../index.js';
 
 const minNum = 1;
 const maxNum = 10;
 
+const description = 'What number is missing in the progression?';
+
 const getProgression = (lengthProgression) => {
   const progression = [];
-  const step = randomNumber(minNum, maxNum);
+  const step = getRandomNumber(minNum, maxNum);
   let result = 0;
   for (let i = 0; i < lengthProgression; i += 1) {
     result += step;
@@ -15,35 +16,27 @@ const getProgression = (lengthProgression) => {
   }
   return progression;
 };
+
 const getReplaceArray = (progression, replaceChar = '..') => {
   const newArr = [...progression];
   const firstIndex = 0;
-  const indexReplacer = randomNumber(firstIndex, progression.length - 1);
-  const charBeforeReplace = progression[indexReplacer];
+  const indexReplacer = getRandomNumber(firstIndex, progression.length - 1);
+  const charBeforeReplace = String(progression[indexReplacer]);
   newArr[indexReplacer] = replaceChar;
   const nums = newArr.join(' ');
 
-  return [charBeforeReplace, nums];
+  return [nums, charBeforeReplace];
 };
 
-const gameRun = () => {
-  const userName = greeting();
-  console.log('What number is missing in the progression?');
-  const countRounds = 3;
+const getDataGame = () => {
   const minLengthProgression = 5;
   const maxLengthProgression = 10;
-
-  for (let i = countRounds; i > 0; i -= 1) {
-    const lengthProgression = randomNumber(minLengthProgression, maxLengthProgression);
-    const progression = getProgression(lengthProgression);
-    const [trueAnswer, expression] = getReplaceArray(progression);
-    const answer = Number(getAnswer(expression));
-    const check = checkAnswer(trueAnswer, answer, userName);
-    if (!check) {
-      return;
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
+  const lengthProgression = getRandomNumber(minLengthProgression, maxLengthProgression);
+  const progression = getProgression(lengthProgression);
+  const [question, correctAnswer] = getReplaceArray(progression);
+  return [question, correctAnswer];
 };
-
-export default gameRun;
+const startGameProgress = () => {
+  runGame(description, getDataGame);
+};
+export default startGameProgress;
